@@ -1,0 +1,28 @@
+@use '../models/index';
+@use 'sass:map';
+
+.bienvenida{
+  font-size: 18px;
+  text-align: center;
+  &__contenido{
+    width: clamp(300px, 90%, 700px);
+    @extend %contenedor;
+    height: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  h2{
+    @extend %h2;
+    margin: 0;
+  }
+  span {
+    color: map.get(index.$modo-oscuro, 'texto-primario');
+    font-size: 2em;
+  }
+  p{
+    @extend %pUno;
+    line-height: 25px;
+  }
+}

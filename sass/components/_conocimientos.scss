@@ -1,0 +1,113 @@
+@use '../models/index';
+@use 'sass:map';
+
+
+.conocimiento{
+  padding-top: 120px;
+  width: 100%;
+  font-size: 18px;
+  &__container{
+    background-color: map.get(index.$modo-oscuro, 'bg-primario');
+    @extend %contenedor;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  &__item{
+    @extend %boxShadow;
+    display: grid;
+    flex: 1 1 550px;
+    gap: 20px;
+    background-color: map.get(index.$modo-oscuro, 'bg-card');
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    @include index.media(tablet){
+      display: flex;
+      flex: 1 1 clamp(400px, 100%, 580px);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    @include index.media(desktop-xl){
+      flex: 1 1 clamp(400px, 100%,  800px);
+    }
+  }
+
+  &__img{
+    @include index.media(tablet){
+      width: 100%;
+      img{
+        width: inherit;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+  }
+  
+  &__descripcion{
+    padding: 20px;
+    font-size: 16px;
+    display: grid;
+    gap: 20px;
+    h3 { 
+      @extend %h3;
+    }
+    @include index.media(tablet){
+      width: 100%;
+      padding-right: 40px;
+    }
+    
+  }
+  &__bootcamp{
+    margin: 20px 0;
+    span{
+      display: inline-block;
+      @extend %pUno;
+      text-transform: capitalize;
+      font-size: 1.2em;
+    }
+    p{
+      margin-bottom: 10px;
+      font-size: 1.4em;
+      @extend %pDos;
+      padding-top: 5px;
+      text-transform: capitalize;
+      font-weight: 800;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+
+  &__calificacion{
+    margin-bottom: 20px;
+    span{
+      color: #d7e60c;
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+
+  &__btn-primario{
+    margin: 20px 0;
+    text-align: center;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @extend %pUno;
+      color: map.get(index.$btn-oscuro, 'texto-primario');
+      text-decoration: none;
+
+    }
+    i{
+      font-size: 1.6em;
+    }
+  }
+  p{
+    @extend %pDos;
+  }
+}
+
+
+
