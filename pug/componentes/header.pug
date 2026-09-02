@@ -1,17 +1,18 @@
 header(class='header' id='inicio')
   nav.header__menu-navegacion
-    .header__logo 
-      a(href='#inicio')
-        h2 
-          span Y
-          span A
-    .header__btn-hamburguesa
-      span.header__btn-hamburguesa-uno
-      span.header__btn-hamburguesa-dos
-      span.header__btn-hamburguesa-tres
-    +navegacion
+    .header__container-nav
+      .header__logo 
+        a(href='#inicio')
+          h2 
+            span Yers
+            span An
+            span Dev
+      .header__btn-hamburguer
+        span.header__btn-hamburguer-uno
+        span.header__btn-hamburguer-dos
+        span.header__btn-hamburguer-tres
+      +navegacion
   section.contenido-header
     .contenido-header__descripcion 
       +headerContenido
-.img-position 
-  img(src="../assets/img/imagenes/img-01.jpg", alt="Imagen del perdil del portafolio", srcset="")
+  

@@ -13,12 +13,16 @@ mixin navegacion()
   .header__menu-lista.header__menu-oculto
     ul
       li
+        i(class="bx bx-home-alt")
         a(href='' + links[0],class='item-nav-1')=title__navar[0]
       li
+        i(class="bx bx-workflow-alt")
         a(href='' + links[1],class='item-nav-2')=title__navar[1]
       li
+        i(class="bx bx-medal-alt-2")
         a(href='' + links[2],class='item-nav-3')=title__navar[2]
       li
+        i(class="bx bx-message-circle-question-mark")
         a(href='' + links[3],class='item-nav-4')=title__navar[3]
 
 
@@ -30,12 +34,19 @@ mixin lista-reutilizable(link,icon)
 // contenido header
 
 mixin headerContenido()
-  h1=nombres 
-  p diseñador web fronted
+  .contenido-header__animation
+    h1 
+      span Hola, 
+      span soy Yerson Andres
+    p Soy desarrollador web apasionado por crear soluciones digitales modernas, simples y funcionales.
+  .contenido-header__btn 
+    a conoce mis proyectos 
+    i(class="bx bx-arrow-right-stroke")
   ul
-    +lista-reutilizable('https://github.com/YersonAnDev','bx bxl-github')
-    +lista-reutilizable('https://www.facebook.com/ridersoft.tecnology/','bx bxl-facebook-circle')
-    +lista-reutilizable('https://www.linkedin.com/in/yerson-andres-chogo-serpa-8aba07359/','bx bxl-linkedin')
+    +lista-reutilizable('https://github.com/YersonAnDev','bxl bx-github')
+    +lista-reutilizable('https://www.facebook.com/ridersoft.tecnology/','bxl bx-facebook')
+    +lista-reutilizable('https://www.linkedin.com/in/yerson-andres-chogo-serpa-8aba07359/','bxl bx-linkedin')
+    +lista-reutilizable('https://www.linkedin.com/in/yerson-andres-chogo-serpa-8aba07359/','bxl bx-instagram')
 
 
 mixin footerContenido()

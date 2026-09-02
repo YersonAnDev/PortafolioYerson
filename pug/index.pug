@@ -1,10 +1,18 @@
 extend componentes/plantilla.pug
 block contenido
-  section.bienvenida
-    .bienvenida__contenido
+  section.welcome
+    .welcome__img-position 
+      img(src="../assets/img/imagenes/img-01.jpg", alt="Imagen del perdil del portafolio", srcset="")
+    .welcome__container
       h2 te doy la bienvenida a mi portafolio de servicios 
+      h3 De una idea a algo que puedes ver.
       span(class='bx bxs-pointer')
-      p A continuación te presento la gama de servicios que puedo ofrecer. También te especifico las tecnologías que actualmente domino y en la cual desarrollo mis proyectos
+      p 
+        span Diseño. 
+        spna Código.
+        span Creatividad.
+      p Detrás de cada proyecto hay una pregunta, una intención y muchas decisiones.
+      a Bienvenido. El recorrido comienza aquí.
   main.proyectos(id='proyectos')
   
     +titulo-separador('proyectos realizados','tecnologias aplicadas')
@@ -57,6 +65,3 @@ block contenido
           .formulario__mensaje
             button(type='submit') enviar datos
             p.formulario__mensaje-enviado#formulario__exito mensaje enviado con exito
-                
-
-

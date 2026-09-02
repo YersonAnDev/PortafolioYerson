@@ -1,28 +1,38 @@
 @use '../models/index';
 @use 'sass:map';
 
-.bienvenida{
-  font-size: 18px;
-  text-align: center;
-  &__contenido{
-    width: clamp(300px, 90%, 700px);
-    @extend %contenedor;
-    height: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.welcome{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  &__img-position{
+    border: 1px solid red;
+    text-align: center;
+    width: 100%;
+    img{
+      //width: clamp(12px, 120px, 340px);
+      //height: clamp(12px, 120px, 340px);
+      width: 200px;
+      height: 200px;
+      border: 1px solid green;
+      border-radius: 50%;
+      border: 5px solid #4B5563;
+      object-fit: cover;
+      position: relative;
+      top: -70px;
+      @include index.media(tablet){
+        width: 300px;
+        height: 300px;
+      }
+    }
+    
   }
-  h2{
-    @extend %h2;
-    margin: 0;
-  }
-  span {
-    color: map.get(index.$modo-oscuro, 'texto-primario');
-    font-size: 2em;
-  }
-  p{
-    @extend %pUno;
-    line-height: 25px;
+  &__container{
+    border: 1px solid black;
   }
 }
