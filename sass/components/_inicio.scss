@@ -2,6 +2,8 @@
 @use 'sass:map';
 
 .welcome{
+  padding-bottom: 100px;
+  text-align: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -9,9 +11,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  //border: 1px solid black;
   &__img-position{
-    border: 1px solid red;
+    //border: 1px solid red;
     text-align: center;
     width: 100%;
     img{
@@ -33,6 +35,46 @@
     
   }
   &__container{
-    border: 1px solid black;
+    //border: 1px solid black;
+    padding-top: 80px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    h2 {
+      color: #f3f4f6;
+      font-size: 2em;
+      text-transform: capitalize;
+
+    }
+    h3{
+      font-size: 1.2em;
+      font-weight: 500;
+      padding: 4px 0;
+      color: #d1d5db;
+    }
+    p{
+      font-size: 1.3em;
+      padding-top: 8px;
+      color: #d1d5db;
+    }
+    a{
+      display: inline-block;
+      text-decoration: none;
+      color: #d1d5db;
+      padding-top: 32px;
+      font-size: 1.1em;
+      color: #4B5563;
+    }
   }
+  &__prf-one{
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 12px 0;
+    color: #4B5563;
+
+
+  
+  } 
+    
 }
