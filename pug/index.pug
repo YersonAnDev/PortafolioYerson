@@ -4,14 +4,24 @@ block contenido
     .welcome__img-position 
       img(src="../assets/img/imagenes/img-01.jpg", alt="Imagen del perdil del portafolio", srcset="")
     .welcome__container
-      h2 te doy la bienvenida a mi portafolio de servicios 
-      h3 De una idea a algo que puedes ver.
-      .welcome__prf-one 
-        span diseño. 
-        spna código.
-        span creatividad.
-      p.welcome__prf-two  Detrás de cada proyecto hay una pregunta, una intención y muchas decisiones.
-      a(href='#proyectos') Bienvenido. El recorrido comienza aquí.
+      .welcome__text-contain
+        ul 
+          li 
+            h2 te doy la bienvenida a mi portafolio de servicios 
+          li 
+            h3 De una idea a algo que puedes ver.
+          li 
+            p Detrás de cada proyecto hay una pregunta, una intención y muchas decisiones.
+          li 
+            .welcome__text-prf-one
+              span diseño. 
+              spna código.  
+              span creatividad.
+          li 
+            a(href='#proyectos') Bienvenido. El recorrido comienza aquí.
+
+      .welcome__img-animation
+        img(src="../assets/img/imagenes/welcome.png", alt="imagen bienvenida")
   main.proyectos(id='proyectos')
   
     +titulo-separador('proyectos realizados','tecnologias aplicadas')
