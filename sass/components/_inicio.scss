@@ -3,7 +3,6 @@
 
 .welcome{
   padding-bottom: 100px;
-  text-align: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -33,17 +32,29 @@
       }
     }
   }
+  &__container {
+    width: 100%;
+    @include index.media(tablet){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      //border: 1px solid black;
+      gap: 10px;
+      }
+    
+
+  }
 
   &__text-contain{
     //border: 1px solid red;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    
+    @include index.media(tablet){
+      max-width: 60%;
+      }
     ul{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       gap: 4px;
       list-style: none;
       padding: none;
@@ -57,31 +68,31 @@
         font-size: 1em;
         &:nth-child(1){
           color: #f3f4f6;
-          text-transform: capitalize;
+          text-transform: uppercase;
+          font-size: 1.3em;
+
         }
         &:nth-child(2){
           color: #d1d5db;
           font-weight: 100;
           font-style: italic;
-          font-size: .8em;
+          font-size: 1em;
           padding-top: 0;
         }
         &:nth-child(3){
-          color: #9CA3AF;
-          font-weight: 100;
-          font-size: 1em;
+            color: #9CA3AF;
+            font-weight: 100;
+            font-size: 1.056em;
+            line-height: 1.6;
+            p{
+              margin-bottom: 12px;
+            }
         }
         &:nth-child(4){
-          color: #9CA3AF;
-          font-size: 1.2em;
-          text-transform: capitalize;
-          font-weight: 800;
-        }
-        &:nth-child(5){
           a{
             color: #4b5563;
             text-decoration: none;
-            font-size: .8em;
+            font-size: .9em;
             text-transform: capitalize;
             font-weight: 300;
             
@@ -92,13 +103,18 @@
   }
   
   &__img-animation{
+    text-align: center;
+    //border: 1px solid green;
+    @include index.media(tablet){
+      max-width: 40%;
+      }
+    
     //border: 1px solid red;
     img{
       //border: 1px solid black;
-      max-width: 300px;
-      max-height: 300px;
+      max-width: 400px;
+      max-height: 400px;
       object-fit: cover;
-
     }
   }
 
